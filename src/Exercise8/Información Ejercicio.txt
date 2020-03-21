@@ -1,0 +1,14 @@
+Ejemplo 8: En una zapatería se conocen las ventas
+mensual d di d l d t d d les de diez modelos de zapatos desde enero
+hasta junio del 2012, cuyo inventario inicial fue de 30
+p gq ares de cada modelo. Escriba un algoritmo que
+proporcione la información que necesita el dueño para
+realizar los pedidos del segundo semestre del año:
+a) ¿Cuáles modelos de zapatos debe pedir porque ya ¿Cuáles modelos de zapatos debe pedir porque ya
+no tiene existencia?
+b) ¿Cuál modelo fue el menos vendido?
+c) ¿En qué mes se vendieron más zapatos?
+d) ¿Cuál es el mes en que más se vendieron zapatos
+de los modelos 3 y 6?
+e) ¿Total de pares de zapatos vendidos en estos 6
+meses en dicha zapatería? meses, en dicha zapatería?
