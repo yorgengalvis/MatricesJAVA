@@ -26,16 +26,31 @@ public class Mundo {
     this.inventario[4][0]=0;this.inventario[4][1]=3;this.inventario[4][2]=0;this.inventario[4][3]=8;this.inventario[4][4]=2;this.inventario[4][5]=5;
     this.inventario[5][0]=0;this.inventario[5][1]=6;this.inventario[5][2]=0;this.inventario[5][3]=1;this.inventario[5][4]=2;this.inventario[5][5]=6;
     this.inventario[6][0]=3;this.inventario[6][1]=4;this.inventario[6][2]=0;this.inventario[6][3]=1;this.inventario[6][4]=2;this.inventario[6][5]=7;
-    this.inventario[7][0]=9;this.inventario[7][1]=4;this.inventario[7][2]=0;this.inventario[7][3]=1;this.inventario[7][4]=2;this.inventario[7][5]=12;
+    this.inventario[7][0]=11;this.inventario[7][1]=4;this.inventario[7][2]=0;this.inventario[7][3]=1;this.inventario[7][4]=2;this.inventario[7][5]=12;
     this.inventario[8][0]=0;this.inventario[8][1]=14;this.inventario[8][2]=0;this.inventario[8][3]=1;this.inventario[8][4]=2;this.inventario[8][5]=2;
     
     }
-   public int cantidadAgotada(){
-       int suma=0;
-       for(int i=0;i<this.inventario.length;i++){
-            for(int j=0;j<this.inventario[i].length;j++){
-                
+    
+    public int[] marcasAgotadas(){
+        int[] marcas=new int[cantidadAgotada()];
+        int[] sumaDeMarcas=sumaPorMarca();
+            for (int j = 0; j < sumaDeMarcas.length; j++) {
+                for (int i = 0; i < marcas.length; i++) {
+                    if(sumaDeMarcas[j]>=30){
+                        marcas[i]=j;
+                        
+                    }
+                }
             }
+        
+        return marcas;
+    }
+    
+    public int cantidadAgotada(){
+       int suma=0;
+       int[] sumasMarcas=sumaPorMarca();
+       for(int i=0;i<sumasMarcas.length;i++){
+       if(sumasMarcas[i]>=30) suma++;
        }
        return suma;
    }
